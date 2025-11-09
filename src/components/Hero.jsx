@@ -1,7 +1,23 @@
 import useShopButtonColor from '../hooks/useShopButtonColor';
 
 const Hero = () => {
-  const { buttonColor } = useShopButtonColor();
+  const { buttonColor, buttonText, buttonShape, buttonEffect } = useShopButtonColor();
+
+  // Map button shape to Tailwind classes
+  const shapeClasses = {
+    rounded: 'rounded-lg',
+    pill: 'rounded-full',
+    square: 'rounded-none',
+    slight: 'rounded'
+  };
+
+  // Map button effect to Tailwind classes
+  const effectClasses = {
+    scale: 'transform hover:scale-105 transition-transform',
+    shadow: 'transition-shadow hover:shadow-2xl',
+    lift: 'transition-transform hover:-translate-y-0.5',
+    none: ''
+  };
 
   return (
     <section className="bg-white py-12 md:py-20">
@@ -19,10 +35,10 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-                className="text-white px-8 py-4 rounded-lg font-semibold shadow-lg transform hover:scale-105 transition-transform"
+                className={`text-white px-8 py-4 font-semibold shadow-lg ${shapeClasses[buttonShape]} ${effectClasses[buttonEffect]}`}
                 style={{ backgroundColor: buttonColor }}
               >
-                Shop nu
+                {buttonText}
               </button>
               <button className="border-2 border-bm-dark text-bm-dark px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
                 Hoe het werkt
