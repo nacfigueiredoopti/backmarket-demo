@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { OptimizelyProvider as OptimizelyReactProvider, createInstance } from '@optimizely/react-sdk';
 import { OPTIMIZELY_SDK_KEY } from '../config/optimizely';
 
-// Create Optimizely instance
+// Create Optimizely instance with auto-polling for real-time updates
 const optimizely = createInstance({
   sdkKey: OPTIMIZELY_SDK_KEY,
+  datafileOptions: {
+    autoUpdate: true,
+    updateInterval: 1000, // Poll for updates every 1 second
+  },
 });
 
 const OptimizelyProvider = ({ children }) => {
