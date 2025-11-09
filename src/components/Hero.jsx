@@ -1,4 +1,8 @@
+import useShopButtonColor from '../hooks/useShopButtonColor';
+
 const Hero = () => {
+  const { buttonColor } = useShopButtonColor();
+
   return (
     <section className="bg-white py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,7 +18,10 @@ const Hero = () => {
               Minimaal 1 jaar garantie. Duurzaam en betrouwbaar.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#9E3B64] text-white px-8 py-4 rounded-lg font-semibold shadow-lg transform hover:scale-105 transition-transform">
+              <button
+                className="text-white px-8 py-4 rounded-lg font-semibold shadow-lg transform hover:scale-105 transition-transform"
+                style={{ backgroundColor: buttonColor }}
+              >
                 Shop nu
               </button>
               <button className="border-2 border-bm-dark text-bm-dark px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
