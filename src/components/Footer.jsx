@@ -7,8 +7,7 @@ const Footer = () => {
           {/* Company info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
-              <span className="bg-gray-600 text-white px-3 py-1 rounded font-bold">Back</span>
-              <span className="ml-1 text-white font-bold">Market</span>
+              <span className="text-white font-semibold text-lg tracking-wide">DEMO STORE</span>
             </div>
             <p className="text-sm mb-4">
               De refurbished supermarkt voor eerlijke tech.
@@ -60,7 +59,7 @@ const Footer = () => {
 
           {/* About */}
           <div>
-            <h3 className="text-white font-bold mb-4">Over Back Market</h3>
+            <h3 className="text-white font-bold mb-4">Over ons</h3>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-gray-400 transition">Over ons</a></li>
               <li><a href="#" className="hover:text-gray-400 transition">Duurzaamheid</a></li>
@@ -117,7 +116,7 @@ const Footer = () => {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <p>&copy; 2024 Back Market. Alle rechten voorbehouden.</p>
+            <p>&copy; 2024 Demo Store. Alle rechten voorbehouden.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-gray-400 transition">Privacybeleid</a>
               <a href="#" className="hover:text-gray-400 transition">Algemene voorwaarden</a>

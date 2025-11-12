@@ -1,36 +1,29 @@
 const Logo = ({ className = "" }) => {
   return (
     <svg
-      viewBox="0 0 200 40"
+      viewBox="0 0 140 40"
       className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Back */}
+      {/* Main square */}
+      <rect x="5" y="8" width="24" height="24" rx="4" fill="#0e1016" />
+
+      {/* Inner accent */}
+      <rect x="10" y="13" width="6" height="14" rx="1" fill="#ff7b00" />
+      <rect x="18" y="13" width="6" height="14" rx="1" fill="#ffffff" />
+
+      {/* Text */}
       <text
-        x="5"
+        x="40"
         y="28"
         fontFamily="Arial, sans-serif"
-        fontSize="24"
-        fontWeight="bold"
+        fontSize="20"
+        fontWeight="600"
         fill="#0e1016"
+        letterSpacing="1"
       >
-        Back
+        DEMO STORE
       </text>
-
-      {/* Market */}
-      <text
-        x="65"
-        y="28"
-        fontFamily="Arial, sans-serif"
-        fontSize="24"
-        fontWeight="bold"
-        fill="#0e1016"
-      >
-        Market
-      </text>
-
-      {/* Dot accent */}
-      <circle cx="165" cy="22" r="4" fill="#ff7b00" />
     </svg>
   );
 };
